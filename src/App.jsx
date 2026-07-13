@@ -44,18 +44,19 @@ const industries = [
 
 const testimonials = [
   {
-    text: "NextGenHR consistently shared candidates who matched both the role and our company culture.",
-    author: "Hiring Manager",
-    subtitle: "Technology Company"
+    text: "Three interviews were lined up within the first week, and the roles actually matched what I'd been doing. The shortlisting was genuinely fast.",
+    author: "Sneha Iyer",
+    subtitle: "Business Development Representative, SaaS Startup"
   },
   {
-    text: "The process was transparent, quick, and professional. I found an opportunity that aligned perfectly with my career goals.",
-    author: "Business Development Executive"
+    text: "Switching from EdTech to B2B SaaS, I wasn't sure my profile would fit. They explained the role clearly and prepped me before the founder round. I cleared it.",
+    author: "Arjun Nair",
+    subtitle: "Account Executive, FinTech"
   },
   {
-    text: "Our hiring cycle became much faster after partnering with NextGenHR.",
-    author: "Founder",
-    subtitle: "SaaS Startup"
+    text: "We hired two SDRs through NextGenHR in under a month. Both showed up interview-ready and are still with us nine months later.",
+    author: "Karthik Rao",
+    subtitle: "Founder, Revenue Tech Startup"
   }
 ]
 
@@ -170,41 +171,48 @@ export default function App() {
       </nav>
 
       {/* Hero */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-20 pb-16 md:pt-28 md:pb-24">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 bg-blue-100 text-blue-700 text-sm font-medium px-4 py-1.5 rounded-full mb-6">
-            <span className="text-base">🇮🇳</span>
-            Modern B2B Careers Platform
+      <section className="relative overflow-hidden bg-slate-900">
+        <img
+          src="/hero-bg.jpg"
+          alt=""
+          className="absolute inset-0 w-full h-full object-cover opacity-25"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-slate-900 via-slate-900/85 to-blue-900/70" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-20 md:pt-32 md:pb-28">
+          <div className="max-w-3xl">
+            <p className="inline-flex items-center gap-2 text-blue-200 text-sm font-semibold uppercase tracking-wider mb-5">
+              <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+              India's Dedicated Platform for Modern B2B Careers
+            </p>
+
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-tight">
+              Connecting Top Sales Talent with{' '}
+              <span className="bg-gradient-to-r from-blue-300 to-white bg-clip-text text-transparent">
+                High-Growth B2B Companies
+              </span>
+            </h1>
+
+            <p className="mt-6 text-lg text-slate-300 max-w-2xl leading-relaxed">
+              We help ambitious professionals build careers in modern B2B sales, and help startups hire revenue talent that performs from day one.
+            </p>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <button className="bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-500 transition shadow-lg shadow-blue-900/40 text-lg">
+                Explore Jobs
+              </button>
+              <button className="border border-white/30 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-white/10 transition text-lg">
+                Hire Talent
+              </button>
+            </div>
           </div>
 
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 leading-tight max-w-5xl mx-auto">
-            Connecting Top Sales Talent with{' '}
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              High-Growth B2B Companies
-            </span>
-          </h1>
-
-          <p className="mt-4 text-base md:text-lg text-gray-500 max-w-2xl mx-auto">
-            India's Dedicated Platform for Modern B2B Careers
-          </p>
-
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button className="w-full sm:w-auto bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 transition shadow-lg shadow-blue-200 text-lg">
-              Explore Jobs
-            </button>
-            <button className="w-full sm:w-auto border-2 border-blue-600 text-blue-600 font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-50 transition text-lg">
-              Hire Talent
-            </button>
-          </div>
-
-          <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto">
+          <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
             <StatCard number="700+" label="Sales Professionals Placed" />
             <StatCard number="12,000" label="Growing Talent Network" />
             <StatCard number="150+" label="Companies Hiring" />
             <StatCard number="40" label="Average Candidate Shortlisting" />
           </div>
         </div>
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[800px] bg-gradient-to-b from-blue-200/20 to-transparent rounded-full blur-3xl pointer-events-none" />
       </section>
 
       {/* Trusted by Growing Businesses */}
@@ -243,31 +251,6 @@ export default function App() {
                 </span>
               </div>
             ))}
-          </div>
-          <p className="mt-6 text-xs text-gray-400 max-w-2xl mx-auto">
-            These companies represent popular career destinations for B2B sales professionals and are shown for career inspiration.
-          </p>
-        </div>
-      </section>
-
-      {/* About */}
-      <section className="relative py-16 md:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600/5 via-purple-600/5 to-blue-600/5 pointer-events-none" />
-        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-100/30 to-transparent pointer-events-none hidden md:block" />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-3xl">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Building Careers. Powering Revenue Teams.
-            </h2>
-            <p className="text-lg text-gray-600 leading-relaxed mb-4">
-              NextGenHR is India's dedicated recruitment platform for modern B2B careers.
-            </p>
-            <p className="text-gray-600 leading-relaxed mb-3">
-              We help startups, SaaS companies, fintech businesses, and growing organizations hire sales professionals who can make an immediate impact.
-            </p>
-            <p className="text-gray-600 leading-relaxed">
-              At the same time, we help talented professionals discover meaningful opportunities where they can grow faster.
-            </p>
           </div>
         </div>
       </section>
@@ -385,14 +368,25 @@ export default function App() {
 
       {/* Industries */}
       <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Industries</span>
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-8">Helping Companies Build Better Teams</h2>
-          <div className="flex flex-wrap justify-center gap-3">
-            {industries.map((ind) => (
-              <span key={ind} className="bg-gray-100 border border-gray-200 rounded-full px-5 py-2.5 text-sm font-medium text-gray-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-600 transition cursor-default">
-                {ind}
-              </span>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-2xl">
+            <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">Industries</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-3">Helping Companies Build Better Teams</h2>
+            <p className="text-gray-600 mb-10">
+              From early-stage SaaS to enterprise fintech, we hire revenue talent across the sectors shaping India's B2B landscape.
+            </p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+            {industries.map((ind, i) => (
+              <div
+                key={ind}
+                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-md transition"
+              >
+                <div className="w-10 h-10 rounded-lg bg-blue-50 text-blue-600 flex items-center justify-center font-bold text-sm mb-4 group-hover:bg-blue-600 group-hover:text-white transition">
+                  {String(i + 1).padStart(2, '0')}
+                </div>
+                <span className="text-sm font-semibold text-gray-800">{ind}</span>
+              </div>
             ))}
           </div>
         </div>
@@ -418,24 +412,57 @@ export default function App() {
         </div>
       </section>
 
+      {/* About */}
+      <section className="relative py-16 md:py-24 overflow-hidden bg-white">
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-blue-50/60 to-transparent pointer-events-none hidden md:block" />
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-3xl">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Building Careers. Powering Revenue Teams.
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed mb-4">
+              NextGenHR is India's dedicated recruitment platform for modern B2B careers.
+            </p>
+            <p className="text-gray-600 leading-relaxed mb-3">
+              We help startups, SaaS companies, fintech businesses, and growing organizations hire sales professionals who can make an immediate impact.
+            </p>
+            <p className="text-gray-600 leading-relaxed">
+              At the same time, we help talented professionals discover meaningful opportunities where they can grow faster.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* For Job Seekers */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-600 to-blue-800 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-blue-200 text-sm font-semibold uppercase tracking-wider">For Job Seekers</span>
-          <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">Find More Than Your Next Job</h2>
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto mb-6">
-            We help professionals build long-term careers through better opportunities, interview guidance, and access to growing companies.
-          </p>
-          <ul className="inline-block text-left space-y-2 mb-8 text-blue-100">
-            <li className="flex items-center gap-2">✔ Discover quality opportunities</li>
-            <li className="flex items-center gap-2">✔ Build your sales career</li>
-            <li className="flex items-center gap-2">✔ Learn from hiring trends</li>
-            <li className="flex items-center gap-2">✔ Get interview-ready</li>
-          </ul>
-          <div>
-            <button className="bg-white text-blue-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-50 transition shadow-lg text-lg">
-              Explore Opportunities
-            </button>
+      <section className="py-16 md:py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">For Job Seekers</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Find more than your next job.</h2>
+              <p className="text-gray-600 leading-relaxed mb-8 max-w-md">
+                We help professionals build long-term careers through better opportunities, interview guidance, and access to growing companies.
+              </p>
+              <button className="bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 transition shadow-lg">
+                Explore Opportunities
+              </button>
+            </div>
+            <div className="border-t border-gray-200">
+              {[
+                ["01", "Discover quality opportunities", "Roles matched to your experience, not just keyword hits."],
+                ["02", "Build your sales career", "Profiles reviewed by people who understand B2B revenue."],
+                ["03", "Learn from hiring trends", "Know what modern revenue teams are actually looking for."],
+                ["04", "Get interview-ready", "Clear communication from application to offer."]
+              ].map(([n, t, d]) => (
+                <div key={n} className="flex gap-5 py-5 border-b border-gray-200">
+                  <span className="text-blue-600 font-bold text-sm mt-0.5">{n}</span>
+                  <div>
+                    <h3 className="font-semibold text-gray-900">{t}</h3>
+                    <p className="text-sm text-gray-600 mt-0.5">{d}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
