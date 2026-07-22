@@ -3,24 +3,25 @@ import Reveal from '../components/Reveal.jsx'
 import Counter from '../components/Counter.jsx'
 
 const icons = {
-  users: 'M16 14a4 4 0 1 0-8 0M12 7a3 3 0 1 0 0 6M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1',
   target: 'M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0-18 0M12 12m-5 0a5 5 0 1 0 10 0a5 5 0 1 0-10 0M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0-2 0',
-  rocket: 'M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M14 4c3 0 6 1 6 1s0 3-1 6c-1 3-4 5-7 5-2 0-3-1-3-3 0-3 2-6 5-9zM9 14l3-3',
+  users: 'M16 14a4 4 0 1 0-8 0M12 7a3 3 0 1 0 0 6M4 21v-1a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v1',
   shield: 'M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z',
+  rocket: 'M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2M14 4c3 0 6 1 6 1s0 3-1 6c-1 3-4 5-7 5-2 0-3-1-3-3 0-3 2-6 5-9zM9 14l3-3',
   chart: 'M4 20V4M4 20h16M8 16v-5M12 16V8M16 16v-8',
   globe: 'M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0-18 0M3 12h18M12 3c2.5 2.5 3.5 6 3.5 9s-1 6.5-3.5 9c-2.5-2.5-3.5-6-3.5-9s1-6.5 3.5-9z',
-  briefcase: 'M3 8h18v11H3zM8 8V5h8v3M3 12h18',
-  check: 'M5 13l4 4L19 7',
   lightbulb: 'M9 18h6M10 21h4M12 3a6 6 0 0 0-4 10.5c.7.7 1 1.5 1 2.5h6c0-1 .3-1.8 1-2.5A6 6 0 0 0 12 3z',
+  check: 'M5 13l4 4L19 7',
+  briefcase: 'M3 8h18v11H3zM8 8V5h8v3M3 12h18',
   mail: 'M3 6h18v12H3zM3 7l9 6 9-6',
   phone: 'M5 4h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z',
   map: 'M9 4L3 6v14l6-2 6 2 6-2V4l-6 2-6-2zM9 4v14M15 6v14',
 }
 
 function Icon({ name, className = 'w-6 h-6' }) {
+  const d = icons[name] || icons.check
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" className={className}>
-      <path d={icons[name] || icons.check} />
+      <path d={d} />
     </svg>
   )
 }
@@ -122,13 +123,12 @@ const pages = {
       { icon: 'mail', title: 'Email', desc: 'hello@nextgenhr.in' },
       { icon: 'phone', title: 'Phone', desc: '+91 00000 00000' },
       { icon: 'map', title: 'Locations', desc: 'Pan India' },
-      { icon: 'users', title: 'Talent Network', desc: 'Join 12,000+ professionals' },
     ],
   },
   privacy: {
     eyebrow: 'Legal',
     title: 'Privacy Policy',
-    desc: 'This is a placeholder Privacy Policy. Replace this content with your official policy before going live.',
+    desc: 'Replace this content with your official privacy policy before going live.',
     cta: { label: 'Back to Home', to: '/' },
     features: [
       { icon: 'shield', title: 'Minimal data', desc: 'We collect only what is needed to match candidates and employers.' },
@@ -139,7 +139,7 @@ const pages = {
   terms: {
     eyebrow: 'Legal',
     title: 'Terms & Conditions',
-    desc: 'This is a placeholder Terms & Conditions page. Replace this content with your official terms before going live.',
+    desc: 'Replace this content with your official terms before going live.',
     cta: { label: 'Back to Home', to: '/' },
     features: [
       { icon: 'check', title: 'Fair use', desc: 'Use of this site is at your own risk.' },
@@ -154,7 +154,6 @@ export default function InfoPage({ slug }) {
 
   return (
     <div>
-      {/* Hero */}
       <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-purple-50 pt-16 pb-16 bg-dots">
         <div className="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-blue-400/20 blur-3xl animate-blob pointer-events-none" />
         <div className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full bg-purple-400/20 blur-3xl animate-blob pointer-events-none" style={{ animationDelay: '2s' }} />
@@ -175,7 +174,6 @@ export default function InfoPage({ slug }) {
         </div>
       </section>
 
-      {/* Feature grid */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -194,7 +192,6 @@ export default function InfoPage({ slug }) {
         </div>
       </section>
 
-      {/* Steps */}
       {page.steps && (
         <section className="py-16 bg-gray-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -216,7 +213,6 @@ export default function InfoPage({ slug }) {
         </section>
       )}
 
-      {/* Stats strip */}
       {page.stats && (
         <section className="py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -236,13 +232,14 @@ export default function InfoPage({ slug }) {
         </section>
       )}
 
-      {/* CTA band */}
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Reveal>
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl px-8 py-12 text-center text-white relative overflow-hidden">
               <div className="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-white/10 blur-3xl animate-blob pointer-events-none" />
-              <h2 className="text-2xl md:text-4xl font-bold relative z-10">{page.cta.label === 'Back to Home' ? 'Ready to learn more?' : "Let's get started"}</h2>
+              <h2 className="text-2xl md:text-4xl font-bold relative z-10">
+                {page.cta.label === 'Back to Home' ? 'Ready to learn more?' : "Let's get started"}
+              </h2>
               <p className="mt-3 text-blue-100 relative z-10">{page.desc}</p>
               <Link to={page.cta.to} className="inline-block mt-6 bg-white text-blue-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-50 hover:-translate-y-0.5 transition shadow-lg relative z-10">
                 {page.cta.label}

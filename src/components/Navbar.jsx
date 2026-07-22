@@ -49,20 +49,12 @@ export default function Navbar() {
           ))}
         </div>
 
-        <div className="flex items-center gap-3">
-          <Link
-            to="/candidates"
-            className="hidden sm:inline-flex text-sm font-medium text-slate-700 hover:text-blue-600 transition"
-          >
-            Sign In
-          </Link>
-          <Link
-            to="/employers"
-            className="text-sm font-medium bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition shadow-md shadow-blue-600/30"
-          >
-            Get Started
-          </Link>
-        </div>
+        <Link
+          to="/employers"
+          className="text-sm font-medium bg-blue-600 text-white px-4 py-2 rounded-xl hover:bg-blue-700 transition shadow-md shadow-blue-600/30"
+        >
+          Get Started
+        </Link>
       </nav>
     </div>
   )

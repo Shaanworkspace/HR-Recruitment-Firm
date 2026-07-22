@@ -170,15 +170,11 @@ export default function Home() {
               </p>
             </Reveal>
             <Reveal delay={240}>
-              <div className="mt-8 flex flex-col sm:flex-row gap-4">
-                <Link to="/jobs" className="bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-500 hover:-translate-y-0.5 transition shadow-lg shadow-blue-900/40 text-lg text-center">
-                  Explore Jobs
-                </Link>
-                <Link to="/employers" className="border border-white/30 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-white/10 hover:-translate-y-0.5 transition text-lg text-center">
-                  Hire Talent
-                </Link>
-              </div>
+              <Link to="/jobs" className="inline-block mt-8 bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 hover:-translate-y-0.5 transition shadow-lg shadow-blue-600/30">
+                Explore Jobs
+              </Link>
             </Reveal>
+
           </div>
 
           <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -396,7 +392,9 @@ export default function Home() {
               <p className="text-lg text-gray-600 leading-relaxed mb-4">NextGenHR is India's dedicated recruitment platform for modern B2B careers.</p>
               <p className="text-gray-600 leading-relaxed mb-3">We help startups, SaaS companies, fintech businesses, and growing organizations hire sales professionals who can make an immediate impact.</p>
               <p className="text-gray-600 leading-relaxed">At the same time, we help talented professionals discover meaningful opportunities where they can grow faster.</p>
-              <Link to="/about" className="inline-block mt-6 text-blue-600 font-semibold hover:text-blue-700 transition">Learn more about us →</Link>
+              <Link to="/about" className="inline-flex items-center gap-2 text-blue-600 font-semibold mt-6 hover:text-blue-700 transition">
+                Learn more about us <span>→</span>
+              </Link>
             </div>
           </Reveal>
         </div>
@@ -411,7 +409,9 @@ export default function Home() {
                 <span className="text-blue-600 font-semibold text-sm uppercase tracking-wider">For Job Seekers</span>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-2 mb-4">Find more than your next job.</h2>
                 <p className="text-gray-600 leading-relaxed mb-8 max-w-md">We help professionals build long-term careers through better opportunities, interview guidance, and access to growing companies.</p>
-                <Link to="/jobs" className="bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 hover:-translate-y-0.5 transition shadow-lg inline-block">Explore Opportunities</Link>
+                <Link to="/jobs" className="inline-block bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl hover:bg-blue-700 hover:-translate-y-0.5 transition shadow-md">
+                  Explore Opportunities
+                </Link>
               </div>
             </Reveal>
             <Reveal delay={120}>
@@ -443,8 +443,10 @@ export default function Home() {
           <Reveal>
             <span className="text-gray-400 text-sm font-semibold uppercase tracking-wider">For Employers</span>
             <h2 className="text-3xl md:text-4xl font-bold mt-2 mb-4">Build a High Performing Revenue Team</h2>
-            <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-8">Finding the right sales talent shouldn't slow your growth. Partner with NextGenHR to hire pre-screened professionals who are ready to contribute from day one.</p>
-            <Link to="/employers" className="bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 hover:-translate-y-0.5 transition shadow-lg text-lg inline-block">Start Hiring</Link>
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">Finding the right sales talent shouldn't slow your growth. Partner with NextGenHR to hire pre-screened professionals who are ready to contribute from day one.</p>
+            <Link to="/contact" className="inline-block mt-8 bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 hover:-translate-y-0.5 transition shadow-lg shadow-blue-600/30">
+              Start Hiring
+            </Link>
           </Reveal>
         </div>
       </section>
@@ -486,9 +488,9 @@ export default function Home() {
               </Reveal>
             ))}
           </div>
-          <Reveal delay={120}>
-            <Link to="/resources" className="bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 hover:-translate-y-0.5 transition shadow-lg inline-block">Read Career Resources</Link>
-          </Reveal>
+          <Link to="/resources" className="inline-block bg-blue-600 text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-700 hover:-translate-y-0.5 transition shadow-md">
+            Read Career Resources
+          </Link>
         </div>
       </section>
 
@@ -499,10 +501,9 @@ export default function Home() {
           <Reveal>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">Ready for Your Next Opportunity?</h2>
             <p className="text-lg text-purple-100 max-w-2xl mx-auto mb-8">Whether you're building your career or building your sales team, NextGenHR is ready to help.</p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Link to="/jobs" className="w-full sm:w-auto bg-white text-purple-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-purple-50 hover:-translate-y-0.5 transition shadow-lg text-lg">Explore Jobs</Link>
-              <Link to="/employers" className="w-full sm:w-auto border-2 border-white text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-white/10 hover:-translate-y-0.5 transition text-lg">Hire Talent</Link>
-            </div>
+            <Link to="/jobs" className="inline-block bg-white text-blue-700 font-semibold px-8 py-3.5 rounded-xl hover:bg-blue-50 hover:-translate-y-0.5 transition shadow-lg">
+              Explore Jobs
+            </Link>
           </Reveal>
         </div>
       </section>
